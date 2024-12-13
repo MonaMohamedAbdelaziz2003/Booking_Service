@@ -1,0 +1,50 @@
+<div>
+    <div class="d-flex justify-content-center align-items-center mt-5 flex-row gap-3">
+        <div class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded">
+            <p>Service Name: {{ ad?.serviceName }}</p>
+            <p>Description: {{ ad?.description }}</p>
+            <p>Price: {{ ad?.price }}</p>
+            <p>company name: {{ ad?.companyName }}</p>
+        </div>
+
+        <div class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded">
+            <div>
+                <h4>Book Service</h4>
+            </div>
+
+            <form action="" [formGroup]="validateForm">
+                <nz-form-item>
+                    <nz-form-label [nzSpan]="24"> Date of Booking</nz-form-label>
+                    <nz-form-control>
+                        <nz-date-picker formControlName="bookDto"></nz-date-picker>
+                    </nz-form-control>
+                </nz-form-item>
+                <button type="button" class="btn btn-primary" (click)="bookService()" [disabled]="validateForm.invalid">Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center mt-5 flex-column  gap-3">
+        <div *ngFor="let rev of review">
+            <nz-card [nzBordered]="false" nzTitle="{{rev.clientName}}">
+                <p>Review: <strong>{{rev.review}}</strong></p>
+                <p>Rating: <strong><nz-rate disabled [ngModel]="rev.rating"></nz-rate></strong></p>
+                <p>posted on: <strong>{{rev.reviewDate|date:"dd/MM/yyyy"}}</strong></p>
+            </nz-card>
+        </div>
+    </div>
+
+    <!-- <div class="d-flex justify-content-center align-items-center mt-5 flex-column gap-3">
+        <div *ngFor="let rev of review">
+            <nz-card [nzBordered]="false">
+                <ng-template #nzTitle>{{ rev.clientName }}</ng-template>
+                <ng-template #nzBody>
+                    <p>Review: <strong>{{ rev.review }}</strong></p>
+                    <p>Rating: <strong><nz-rate [ngModel]="rev.rating" disabled></nz-rate></strong></p>
+                    <p>Posted on: <strong>{{ rev.reviewDate | date: 'dd/MM/yyyy' }}</strong></p>
+                </ng-template>
+            </nz-card>
+        </div>
+    </div> -->
+
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <div class="d-flex justify-content-center align-items-center mt-5 ">
+        <div class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded d-flex flex-column align-items-center">
+
+            <div class="p-3">
+                <h3>Login</h3>
+            </div>
+            <form action="" [formGroup]="validateForm" (submit)="login()">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="not valid email">
+                        <input class="input" type="email" placeholder="E-mail" formControlName="email" id="email" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="not valid password">
+                        <input class="input" type="password" placeholder="password" formControlName="password" id="password" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <div *ngIf="field!=''" class=" bg-danger p-2 m-3 rounded text-white">
+                    <h4>{{field}}</h4>
+                </div>
+
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="not valid confirm">
+                        <input class="input" type="submit" placeholder="Login" />
+                    </nz-form-control>
+                </nz-form-item>
+                Or
+                <a routerLink="/signup" class="text-danger">register now</a>
+            </form>
+        </div>
+
+    </div>
+</div>

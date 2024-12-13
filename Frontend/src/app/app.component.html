@@ -1,0 +1,43 @@
+<header *ngIf="!isClient && !isCompny " class=" d-flex justify-content-between p-3 bg-danger bg-gradient align-items-center text-white ">
+    <div>
+        <h2>Service Booking System</h2>
+    </div>
+    <div class=" d-flex justify-content-between flex-row gap-4 text-light">
+        <a routerLink="/">Home</a>
+        <a routerLink="/signup">Sign Up</a>
+        <a routerLink="/signin">login</a>
+    </div>
+</header>
+
+<div *ngIf="isClient">
+    <header class=" d-flex justify-content-between p-3 bg-danger bg-gradient align-items-center text-white ">
+        <div>
+            <h2>Service Booking System client</h2>
+        </div>
+        <div class=" d-flex justify-content-between flex-row gap-4 text-light">
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="client/dashboard">Dashboard</a>
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="client/mybooking">Booking</a>
+            <a nz-button nzType="link" routerLinkActive="active" (click)="signOut()">LogOut</a>
+        </div>
+    </header>
+</div>
+
+
+
+<div *ngIf="isCompny">
+    <header class=" d-flex justify-content-between p-3 bg-danger bg-gradient align-items-center text-white ">
+        <div>
+            <h2>Service Booking System company</h2>
+        </div>
+        <div class=" d-flex justify-content-between flex-row gap-4 text-light">
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="company/dashboard">Dashboard</a>
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="company/ad">Post Ad</a>
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="ads"> Ads</a>
+            <a nz-button nzType="link" routerLinkActive="active" routerLink="company/reviews"> Reviews</a>
+            <a nz-button nzType="link" routerLinkActive="active" (click)="signOut()">LogOut</a>
+        </div>
+    </header>
+</div>
+
+<router-outlet>
+</router-outlet>

@@ -1,0 +1,14 @@
+<form action="" [formGroup]="validateForm" nz-form (submit)="searchByName()" class="d-flex justify-content-center align-items-center mt-5 flex-row gap-3">
+    <input nz-input placeholder="Enter service name to search" nzSize="large" formControlName="service">
+    <button nz-button nzSize="large" nz-type="primary" [disabled]="validateForm.invalid" type="button" class="btn btn-primary">Search</button>
+</form>
+<div class="d-flex justify-content-center align-items-center mt-5 flex-column">
+    <div *ngFor="let item of data" class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded">
+        <p>Service Name: {{ item.serviceName }}</p>
+        <p>Description: {{ item.description }}</p>
+        <p>Price: {{ item.price }}</p>
+        <div class="d-flex gap-3">
+            <button type="button" class="btn btn-primary" routerLink="ad/{{item.id}}">view</button>
+        </div>
+    </div>
+</div>

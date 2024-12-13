@@ -1,0 +1,62 @@
+<div class="mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Email</th>
+                <th scope="col">Service Name </th>
+                <th scope="col"> Rating</th>
+                <th scope="col"> Review</th>
+                <th scope="col">Review Date</th>
+            </tr>
+            <!--
+              adId
+:
+1
+bookId
+:
+null
+clientName
+:
+"mona"
+email
+:
+"mn18@gmail.com"
+id
+:
+1
+rating
+:
+3
+review
+:
+"sdfghj"
+reviewDate
+:
+"2024-05-07T21:09:59.937+00:00"
+serviceName
+:
+"Updated Service Name"
+userId
+:
+136
+             -->
+        </thead>
+        <tbody class="table-group-divider">
+            <tr *ngFor="let book of reviews ; let index= index">
+                <th scope="row">{{index+1}}</th>
+                <td>{{book.email}}</td>
+                <td>{{book.serviceName}}</td>
+                <td>{{book.rating}}</td>
+                <td>{{book.review}}</td>
+                <td>{{book.reviewDate| date:"dd/MM/yyyy"}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger" (click)="deleteReview(book.id)">Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
