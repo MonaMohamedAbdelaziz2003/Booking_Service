@@ -35,6 +35,7 @@ export const routes: Routes = [
   {path:'client/dashboard/ad/:id',component:AdDetailsComponent},
   {path:'client/mybooking',component:MyBookingComponent},
   {path:'client/mybooking/review/:id',component:ReviewComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
 ];
 
