@@ -13,6 +13,5 @@ List<adDTO> getAdsByName(String name);
 boolean bookService(ReservationDto reservationDto);
 adDetailsForClientDto getDetailsForClientDto(Long adId);
 List<ReservationDto> getAllBookingByUserId(Long id);
-
- boolean giveReview(reviewDto reviewDto);
+boolean giveReview(reviewDto reviewDto);
 }

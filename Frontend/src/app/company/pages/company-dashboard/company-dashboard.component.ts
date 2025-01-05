@@ -40,7 +40,20 @@ changebookingstatus(bookingId:Number,status:String){
         {nzDuration:5000}
     );}
   )
-
 }
+
+getStatusClass(status: string): string {
+  switch (status) {
+      case 'APPROVED':
+          return 'status-approved';
+      case 'REJECTED':
+          return 'status-rejected';
+      case 'PENDING':
+          return 'status-pending';
+      default:
+          return '';
+  }
+}
+
 
 }

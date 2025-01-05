@@ -5,8 +5,11 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.example.bookingserviceproject"})
+
 public class BookingserviceprojectApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(BookingserviceprojectApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BookingserviceprojectApplication.class, args);
+        System.out.println("1mona1");
+		// System.out.println("ApplicationContext is not available.");
+    }
 }

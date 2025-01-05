@@ -1,7 +1,77 @@
-textarea {
-    width: 20rem;
-    padding: 10px;
+// textarea {
+//     width: 20rem;
+//     padding: 10px;
+//     border-radius: 10px;
+//     border: 1px solid #bebebe;
+//     font-size: 18px;
+// }
+
+/* Post Review Form */
+
+
+/* Post Review Form */
+
+
+/* Post Review Form */
+
+.shadow-sm {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    border: 1px solid #bebebe;
-    font-size: 18px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+textarea.form-control {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+textarea.form-control:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+.nz-rate {
+    font-size: 1.25rem;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+button.btn-primary {
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+
+/* Responsive Styling */
+
+@media (max-width: 768px) {
+    .shadow-sm {
+        padding: 20px;
+    }
+    button.btn-primary {
+        padding: 10px 15px;
+    }
 }

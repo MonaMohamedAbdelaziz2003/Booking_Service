@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './signup-client.component.html',
   styleUrl: './signup-client.component.scss'
 })
+
 export class SignupClientComponent {
 validateForm!:FormGroup;
 constructor(private fb:FormBuilder,

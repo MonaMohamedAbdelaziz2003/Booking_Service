@@ -64,6 +64,8 @@ public UserDto signUpCompany(signupRequistDTO signupRequist) throws Exception {
    // SecretKey key = DES.generateKey();
    // DES des = new DES(key);
    // user.setFirstname(encode(des.encrypt(signupRequist.getFirstname())));
+      System.out.println("signupRequist");
+      
       User user = new User();
       user.setFirstname(signupRequist.getFirstname());
       user.setLastname(signupRequist.getLastname());

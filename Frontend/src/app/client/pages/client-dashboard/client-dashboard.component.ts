@@ -28,7 +28,9 @@ ngOnInit(){
           this.data=res;
       })
     }
-  searchByName(){
+  
+    searchByName(){
+    console.log("1",this.validateForm.get(['service']).value)
     this.clientser.searchByName(this.validateForm.get(['service']).value).subscribe(res=>{
       this.data=res;
     })

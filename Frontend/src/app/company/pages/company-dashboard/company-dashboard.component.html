@@ -1,32 +1,39 @@
-<!-- <nz-table [nzData]="booking"> -->
 <div class="mt-5">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Client Name</th>
-                <th scope="col">Service </th>
-                <th scope="col"> Date</th>
-                <th scope="col"> Status</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            <tr *ngFor="let book of booking ; let index= index">
-                <th scope="row">{{index+1}}</th>
-                <td>{{book.userName}}</td>
-                <td>{{book.serviceName}}</td>
-                <td>{{book.bookData| date:"dd/MM/yyyy"}}</td>
-                <td>{{book.reservationStatus}}</td>
-                <td>
-                    <span *ngIf="book.reservationStatus=='PENDING'" class="d-flex gap-2">
-                    <button type="button" class="btn btn-primary" (click)="changebookingstatus(book.id,'APPROVED')">Approve </button>
-                    <button type="button" class="btn btn-danger"  (click)="changebookingstatus(book.id,'REJECTED')">Reject</button>
-                  </span>
-                </td>
-            </tr>
-        </tbody>
-
-    </table>
-
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-primary">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Client Name</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of booking; let index = index">
+                    <th scope="row">{{ index + 1 }}</th>
+                    <td>{{ book.userName }}</td>
+                    <td>{{ book.serviceName }}</td>
+                    <td>{{ book.bookData | date: 'dd/MM/yyyy' }}</td>
+                    <td>
+                        <span [ngClass]="getStatusClass(book.reservationStatus)">
+                          {{ book.reservationStatus }}
+                      </span>
+                    </td>
+                    <td>
+                        <div *ngIf="book.reservationStatus == 'PENDING'" class="d-flex gap-2">
+                            <button type="button" class="btn btn-success btn-sm" (click)="changebookingstatus(book.id, 'APPROVED')">
+                              Approve
+                          </button>
+                            <button type="button" class="btn btn-danger btn-sm" (click)="changebookingstatus(book.id, 'REJECTED')">
+                              Reject
+                          </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

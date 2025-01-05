@@ -18,6 +18,7 @@ import com.example.bookingserviceproject.dto.adDTO;
 import com.example.bookingserviceproject.dto.reviewDto;
 import com.example.bookingserviceproject.dto.signupRequistDTO;
 import com.example.bookingserviceproject.entity.Review;
+import com.example.bookingserviceproject.entity.User;
 import com.example.bookingserviceproject.services.authantication.authService;
 import com.example.bookingserviceproject.services.client.clientSer;
 import com.example.bookingserviceproject.services.jwt.OurUserDetailsService;
@@ -55,7 +56,12 @@ public class authanticationController {
    public static final String TOKEN_PREFIX="Bearer";
    public static final String HEADER_STRING="Authorization";
 
-  
+   @GetMapping("/test-db")
+    public String testDatabase() {
+        System.out.println("Test DB endpoint hit");
+        return "mona"; 
+    }
+    
    @PostMapping("/client/sign-up")
    public ResponseEntity<?> signupClient(@RequestBody signupRequistDTO requ) throws Exception{
        if (authserv.presentEmail(requ.getEmail()).isPresent()) {
@@ -65,6 +71,7 @@ public class authanticationController {
        return new ResponseEntity<>(createUser, HttpStatus.OK);
    }
 
+
    @PostMapping("/company/sign-up")
    public ResponseEntity<?> signupCompany(@RequestBody signupRequistDTO requ) throws Exception{//ResponseEntity<?>
        if (authserv.presentEmail(requ.getEmail()).isPresent()) {
@@ -73,7 +80,7 @@ public class authanticationController {
        UserDto createUser = authserv.signUpCompany(requ);
        return new ResponseEntity<>(createUser, HttpStatus.OK);
    }
-
+   
    
  public String hashSHA256(String message) throws NoSuchAlgorithmException {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -154,6 +161,7 @@ public class authanticationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
+    
     @DeleteMapping("/ad/{adId}")
     public ResponseEntity<Object> deleteAd(@PathVariable Long adId) throws IOException{
         boolean success=companyService.deleteAd(adId);

@@ -1,14 +1,15 @@
-<form action="" [formGroup]="validateForm" nz-form (submit)="searchByName()" class="d-flex justify-content-center align-items-center mt-5 flex-row gap-3">
-    <input nz-input placeholder="Enter service name to search" nzSize="large" formControlName="service">
-    <button nz-button nzSize="large" nz-type="primary" [disabled]="validateForm.invalid" type="button" class="btn btn-primary">Search</button>
+<form action="" [formGroup]="validateForm" nz-form class="d-flex justify-content-center align-items-center flex-row gap-3 shadow-sm rounded p-3">
+    <input nz-input placeholder="Enter service name to search" nzSize="large" formControlName="service" class="form-control rounded-3">
+    <button nz-button nzSize="large" nz-type="primary" (click)="searchByName()" [disabled]="validateForm.invalid" type="button" class="btn btn-primary rounded-3">Search</button>
 </form>
+
 <div class="d-flex justify-content-center align-items-center mt-5 flex-column">
-    <div *ngFor="let item of data" class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded">
-        <p>Service Name: {{ item.serviceName }}</p>
-        <p>Description: {{ item.description }}</p>
-        <p>Price: {{ item.price }}</p>
+    <div *ngFor="let item of data" class="service-item shadow-lg p-5 mb-5 bg-white rounded-3">
+        <p><strong>Service Name:</strong> {{ item.serviceName }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Price:</strong> {{ item.price }}</p>
         <div class="d-flex gap-3">
-            <button type="button" class="btn btn-primary" routerLink="ad/{{item.id}}">view</button>
+            <button type="button" class="btn btn-primary rounded-3" routerLink="ad/{{item.id}}">View</button>
         </div>
     </div>
 </div>

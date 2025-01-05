@@ -1,7 +1,122 @@
-.input {
-    width: 20rem;
-    padding: 10px;
+/* Container for the form */
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+/* Form container with shadow and padding */
+
+.form-container {
+    background-color: #ffffff;
     border-radius: 10px;
-    border: 1px solid #bebebe;
-    font-size: 18px;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
+
+/* Heading style */
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Input field style */
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+/* Input field focus effect */
+
+.input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+/* Submit button style */
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Submit button hover effect */
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Error message styling */
+
+.bg-danger {
+    background-color: #dc3545;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+/* Text link for Login */
+
+a.text-danger {
+    color: #dc3545;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a.text-danger:hover {
+    text-decoration: underline;
+}
+
+
+/* Spacing between elements */
+
+.p-3 {
+    padding: 15px;
+}
+
+.m-3 {
+    margin: 15px;
+}
+
+
+/* Responsive Design - ensuring proper view on mobile screens */
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+    .input,
+    .submit-btn {
+        padding: 10px;
+    }
 }

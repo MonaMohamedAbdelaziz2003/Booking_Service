@@ -2,3 +2,160 @@ a {
     color: white;
     font-weight: bold;
 }
+
+
+/* Header Styling */
+
+
+/* Header Styling */
+
+// .header {
+//     padding: 20px;
+//     background-color: #fff;
+//     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+//     /* Soft shadow */
+//     border-radius: 10px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     color: #4facfe;
+//     /* Blue color for header */
+// }
+// .header h2 {
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//     margin: 0;
+// }
+// .header .d-flex a {
+//     color: #4facfe;
+//     /* Matching button color */
+//     text-decoration: none;
+//     font-size: 1rem;
+//     font-weight: 500;
+//     transition: color 0.3s ease;
+// }
+// .header .d-flex a:hover {
+//     color: #00f2fe;
+//     /* Light cyan on hover */
+//     text-decoration: underline;
+// }
+// .header .d-flex a.active {
+//     font-weight: bold;
+//     color: #00f2fe;
+//     /* Active link color */
+// }
+// /* Header Link Styling */
+// .header-link {
+//     padding: 12px 20px;
+//     border-radius: 10px;
+//     background: linear-gradient(135deg, #4facfe, #00f2fe);
+//     /* Gradient background */
+//     color: white;
+//     transition: background 0.3s ease, box-shadow 0.3s ease;
+// }
+// .header-link:hover {
+//     background: linear-gradient(135deg, #00f2fe, #4facfe);
+//     /* Hover effect */
+//     box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+//     /* Hover shadow */
+// }
+// /* Responsive Styling */
+// @media (max-width: 768px) {
+//     .header {
+//         flex-direction: column;
+//         align-items: flex-start;
+//     }
+//     .header h2 {
+//         font-size: 1.3rem;
+//     }
+//     .header .d-flex a {
+//         font-size: 1rem;
+//     }
+// }
+//
+
+/* General Header Styling */
+
+
+/* Styling for header */
+
+
+/* General header styling */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #007bff;
+    /* primary color */
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+/* On hover */
+
+.header-link:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Mobile and Tablet responsiveness */
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .header h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    .d-flex {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .header-link {
+        font-size: 0.9rem;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+}
+
+
+/* Very small screen optimization (Phones) */
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+    .header h2 {
+        font-size: 1.2rem;
+    }
+    .header-link {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

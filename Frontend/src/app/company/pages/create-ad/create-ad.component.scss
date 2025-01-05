@@ -1,15 +1,80 @@
-input,
-textarea,
-button {
-    width: 20rem;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #bebebe;
-    font-size: 18px;
+// input,
+// textarea,
+// button {
+//     width: 20rem;
+//     padding: 10px;
+//     border-radius: 10px;
+//     border: 1px solid #bebebe;
+//     font-size: 18px;
+// }
+// button {
+//     color: white;
+//     background-color: black;
+//     font-weight: bold;
+// }
+
+/* Container Styling */
+
+.d-flex {
+    max-width: 800px;
+    margin: auto;
 }
 
-button {
-    color: white;
-    background-color: black;
+
+/* Input and Textarea Styling */
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 0.2rem rgba(79, 172, 254, 0.25);
+}
+
+
+/* Button Styling */
+
+.btn-dark {
+    background-color: #4facfe;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-dark:hover {
+    background-color: #3d8dfc;
+    transform: scale(1.05);
+}
+
+
+/* Header Styling */
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .d-flex {
+        padding: 15px;
+        width: 100%;
+    }
+    .form-control {
+        font-size: 0.9rem;
+    }
+    .btn-dark {
+        font-size: 0.9rem;
+    }
 }

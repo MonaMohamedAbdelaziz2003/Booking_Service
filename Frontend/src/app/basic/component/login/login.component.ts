@@ -29,9 +29,9 @@ export class LoginComponent {
 
 field:string='';
 login(){
+  // console.log(this.validateForm.value)
   if (this.validateForm.valid) {
-    this.authService.login(this.validateForm.value)
-    .subscribe(
+    this.authService.login(this.validateForm.value).subscribe(
       success =>{
         if(UserStorageService.isClientLogIn()){
           this.router.navigateByUrl('client/dashboard');

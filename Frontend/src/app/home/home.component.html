@@ -1,0 +1,27 @@
+<div class="home-container">
+    <section class="hero-section text-center py-5">
+        <h1 class="display-4 text-primary">Find Your Perfect Service</h1>
+        <p class="lead text-muted">Browse through various services and book the one that suits your needs.</p>
+        <button class="btn btn-primary" (click)="scrollToSection()">Browse Services</button>
+
+    </section>
+
+    <div id="serv" #serv class="d-flex justify-content-center align-items-center mt-5 flex-column w-100 ">
+        <div *ngFor="let item of ads " class="service-item shadow-sm p-4 mb-4 bg-light rounded w-75 ">
+            <h4 class="text-primary mb-3 ">{{ item.serviceName }}</h4>
+            <p><strong>Description:</strong> {{ item.description }}</p>
+            <p><strong>Price:</strong> ${{ item.price }}</p>
+        </div>
+    </div>
+</div>
+
+<section class="call-to-action bg-primary text-white text-center py-5 ">
+    <h2>Ready to Book Your Service?</h2>
+    <p>Sign up now to start booking your services or log in to manage your bookings.</p>
+    <a routerLink="/signup-client" class="btn btn-light ">Sign Up</a>
+    <a routerLink="/signin" class="btn btn-light ">Login</a>
+</section>
+
+<footer class="footer bg-dark text-white text-center py-3 ">
+    <p>&copy; 2025 Service Booking System | All Rights Reserved</p>
+</footer>

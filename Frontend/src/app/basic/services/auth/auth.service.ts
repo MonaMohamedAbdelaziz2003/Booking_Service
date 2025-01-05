@@ -11,13 +11,14 @@ const AUTH_HEADER = "Authorization";
 })
 
 export class AuthService {
- 
+
 constructor(private http:HttpClient,private userStorgeServ:UserStorageService) { }
 
   signUpClient(dataOfClient:any): Observable<any> {
     return this.http.post(BASIC_URL+"/api/v1/auth/client/sign-up",dataOfClient);
   }
   signUpCompany(dataOfCompany:any): Observable<any> {
+    console.log(dataOfCompany)
     return this.http.post(BASIC_URL+"/api/v1/auth/company/sign-up",dataOfCompany);
   }
 
@@ -30,6 +31,7 @@ constructor(private http:HttpClient,private userStorgeServ:UserStorageService) {
 
 
   login(dataOfUser:any) {
+    console.log('1',dataOfUser)
     return this.http.post(BASIC_URL+"/api/v1/auth/signin", dataOfUser,{observe:"response"})
     .pipe(
       map((res:HttpResponse<any>)=>{

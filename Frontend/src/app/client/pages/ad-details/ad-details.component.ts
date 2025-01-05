@@ -69,7 +69,7 @@ ngOnInit(){
           'Booking success',
           {nzDuration:5000}
       );
-    this.router.navigateByUrl('client/booking');
+    this.router.navigateByUrl('client/mybooking');
     }
     , error=>{
       this.notification

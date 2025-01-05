@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>22</java.version>
 	</properties>
-	<dependencies>
+<dependencies>
 
  	<dependency>
  		<groupId>org.springframework.boot</groupId>
@@ -61,14 +61,7 @@
     <version>0.12.0</version>
 </dependency>
 
-
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt-jackson</artifactId>
-    <version>0.11.5</version>
-</dependency>
-
-<dependency>
+<!-- <dependency>
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-api</artifactId>
     <version>0.11.5</version>
@@ -82,7 +75,7 @@
     <groupId>io.jsonwebtoken</groupId>
     <artifactId>jjwt-jackson</artifactId>
     <version>0.11.5</version>
-  </dependency>
+  </dependency> -->
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
@@ -137,25 +130,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 
 <dependency>
     <groupId>org.springframework.session</groupId>
     <artifactId>spring-session-jdbc</artifactId>
 </dependency>
+
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
     <version>2.1.214</version>
     <scope>runtime</scope>
 </dependency>
-
-
 
 <dependency>
     <groupId>com.googlecode.json-simple</groupId>
@@ -170,18 +162,11 @@
 </dependency>
 
 
-<dependency>
+        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-data-redis</artifactId>
@@ -200,6 +185,7 @@
  </dependencies>
 
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

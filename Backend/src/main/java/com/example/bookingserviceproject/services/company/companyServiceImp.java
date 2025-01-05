@@ -4,10 +4,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import com.example.bookingserviceproject.dto.ReservationDto;
 import com.example.bookingserviceproject.dto.adDTO;
 import com.example.bookingserviceproject.dto.reviewDto;
@@ -29,8 +27,10 @@ public class companyServiceImp implements companyService {
 
     @Autowired
     private adRepo adRepo;
+
     @Autowired
     private reversionRepo reservRepo;
+    
     @Autowired
     private reviewRepo reviewRepo;
 

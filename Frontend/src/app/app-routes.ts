@@ -15,11 +15,14 @@ import { AdDetailsComponent } from './client/pages/ad-details/ad-details.compone
 import { MyBookingComponent } from './client/pages/my-booking/my-booking.component';
 import { ReviewComponent } from './client/pages/review/review.component';
 import { GetReviewComponent } from './company/pages/get-review/get-review.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
   {path:'client',loadChildren:()=>import('./client/client.module').then(m=>m.ClientModule)},
   {path:'company',loadChildren:()=>import('./company/company.module').then(m=>m.CompanyModule)},
-  {path:'signup/signup-client',component:SignupClientComponent},
+  {path:'signup-client',component:SignupClientComponent},
+  {path:'home',component:HomeComponent},
+  // {path:'signup/signup-client',component:SignupClientComponent},
   {path:'signup/signup-company',component:SignupCompanyComponent},
   {path:'signin',component:LoginComponent},
   {path:'signup',component:SignupComponent},

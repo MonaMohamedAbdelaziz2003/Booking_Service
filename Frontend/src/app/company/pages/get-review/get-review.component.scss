@@ -1,0 +1,64 @@
+/* إضافة مساحة بين الصفوف في الجدول */
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    /* تباعد بين الصفوف */
+    width: 100%;
+}
+
+
+/* تنسيق العناوين في الجدول */
+
+.table thead th {
+    background-color: #cfe2ff;
+    /* لون خلفية داكنة */
+    color: rgb(0, 0, 115);
+    /* لون النص أبيض */
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* تنسيق الصفوف داخل الجدول */
+
+.table tbody tr {
+    background-color: #f8f9fa;
+    /* خلفية فاتحة للصفوف */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    /* تأثير التدرج */
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    /* تغيير اللون عند المرور بالماوس */
+    transform: scale(1.02);
+    /* تكبير الصف عند المرور */
+}
+
+
+/* تنسيق الأعمدة داخل الجدول */
+
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* تنسيق الأزرار داخل الجدول */
+
+.table .btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+
+/* تنسيق الزر عند مرور الماوس عليه */
+
+.table .btn-danger:hover {
+    background-color: #dc3545;
+    /* تغيير لون الزر عند المرور بالماوس */
+    border-color: #c82333;
+}

@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <div class="d-flex justify-content-center align-items-center mt-5 ">
         <div class=" shadow-sm p-5 mb-5 bg-body-tertiary rounded d-flex flex-column align-items-center">
             <div class="p-3">
@@ -53,5 +53,87 @@
             </form>
         </div>
 
+    </div>
+</div> -->
+
+<header class="d-flex justify-content-between">
+    <!-- d-flex justify-content-between p-3 bg-danger bg-gradient align-items-center text-white -->
+    <div>
+        <h2>Service Booking System</h2>
+    </div>
+    <div class="d-flex justify-content-between flex-row gap-4 text-light">
+        <a routerLink="/home" class="text-light text-decoration-none">Home</a>
+    </div>
+</header>
+
+
+<div class="signup-container d-flex justify-content-center align-items-center mt-5">
+    <div class="signup-box shadow-lg p-5 bg-white rounded d-flex flex-column align-items-center">
+        <div class="text-center mb-4">
+            <h3 class="text-primary fw-bold">Client Sign Up</h3>
+        </div>
+        <form [formGroup]="validateForm" (submit)="signupClient()">
+
+            <!-- First Name -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="First Name is required">
+                    <input class="input form-control" placeholder="First Name" formControlName="firstname" id="firstname" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Last Name -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Last Name is required">
+                    <input class="input form-control" placeholder="Last Name" formControlName="lastname" id="lastname" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Phone -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Phone number is required">
+                    <input class="input form-control" placeholder="Phone" formControlName="phone" id="phone" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Email -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please enter a valid email">
+                    <input class="input form-control" type="email" placeholder="Email" formControlName="email" id="email" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Password -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Password must be at least 6 characters">
+                    <input class="input form-control" type="password" placeholder="Password" formControlName="password" id="password" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Confirm Password -->
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Passwords do not match">
+                    <input class="input form-control" type="password" placeholder="Confirm Password" formControlName="chickpassword" id="confirmpassword" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Error Message -->
+            <div *ngIf="field !== ''" class="bg-danger p-2 m-3 rounded text-white text-center">
+                <h4>{{ field }}</h4>
+            </div>
+
+            <!-- Submit Button -->
+            <nz-form-item>
+                <nz-form-control>
+                    <input class="btn btn-primary w-100 mt-3 fw-bold" type="submit" value="Sign Up" />
+                </nz-form-control>
+            </nz-form-item>
+
+            <!-- Login Link -->
+            <div class="text-center mt-3">
+                <span>Or </span>
+                <a routerLink="/signin" class="text-primary fw-bold">Login now</a>
+            </div>
+
+        </form>
     </div>
 </div>

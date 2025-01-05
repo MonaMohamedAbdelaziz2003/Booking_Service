@@ -1,7 +1,99 @@
-.input {
-    width: 20rem;
+/* General Container */
+
+.login-container {
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+
+/* Login Box */
+
+.login-box {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+
+/* Hero Header */
+
+header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+/* Form Labels */
+
+.form-label {
+    font-weight: bold;
+}
+
+
+/* Form Fields */
+
+.form-control {
+    width: 100%;
     padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #bebebe;
-    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+
+/* Error Messages */
+
+.text-danger {
+    font-size: 0.9rem;
+}
+
+
+/* Submit Button */
+
+.btn {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Register Link */
+
+.text-primary {
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Call to Action - Register Link */
+
+p.text-center {
+    font-size: 1rem;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px;
+    }
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-box {
+        padding: 15px;
+    }
+    header h2 {
+        font-size: 1.3rem;
+    }
 }

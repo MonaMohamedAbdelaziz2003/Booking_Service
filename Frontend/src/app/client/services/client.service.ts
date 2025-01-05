@@ -24,6 +24,7 @@ export class ClientService {
 
 
   bookservice(bookDto:any):Observable<any>{
+    console.log(bookDto)
     return this.http.post(BASIC_URL+"api/v1/auth/book-service",bookDto);
   }
 
